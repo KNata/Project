@@ -15,14 +15,11 @@
     <br>
     <br>
 
-    <c:if test="">
+
         <a href="/views/adminView/adminMainPage.jsp"><button type="submit" class="btn btn-secondary btn-md"><fmt:message key="back.to.main.page" bundle="${rb}"/></button></a>
-    </c:if>
-    <c:if test="${driver}">
-        <a href="/views/userView/driverMainPage.jsp"><button type="submit" class="btn btn-secondary btn-md"><fmt:message key="back.to.main.page" bundle="${rb}"/></button></a>
-    </c:if>
+
+
     <br><br>
-    <a href="/views/adminView/successPageAdmin.jsp" class="btn btn-primary btn-lg btn-block" role="button" aria-pressed="true"><fmt:message key="back.to.main.page" bundle="${rb}"/></a>
 </div>
     <br>
     <br>

@@ -44,13 +44,13 @@ public class AddNewVisitorCommand implements ICommand {
                 boolean wasAdded = visitorDAO.addRecord(theVisitor);
                 System.out.println(wasAdded);
                 if (wasAdded) {
-                    request.getRequestDispatcher("/views/commonView/successPage.jsp").forward(request, responce);
+                    request.getRequestDispatcher("/views/adminView/successPageAdmin.jsp").forward(request, responce);
                 } else {
-                    request.getRequestDispatcher("/views/commonView/errorPage.jsp").forward(request, responce);
+                    request.getRequestDispatcher("/views/adminView/errorPageAdmin.jsp").forward(request, responce);
                 }
             }
         } else {
-            request.getRequestDispatcher("/views/commonView/errorPage.jsp").forward(request, responce);
+            request.getRequestDispatcher("/views/adminView/errorPageAdmin.jsp").forward(request, responce);
         }
     }
 }

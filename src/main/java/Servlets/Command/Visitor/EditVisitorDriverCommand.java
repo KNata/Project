@@ -28,10 +28,10 @@ public class EditVisitorDriverCommand implements ICommand {
         String newDriverPassword = request.getParameter("driverPassword");
         boolean wasUpdated = visitorDAO.update(theVisitor.getVisitorLogin(), newDriverPassword);
         if (wasUpdated) {
-            RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/views/commonView/successPage.jsp");
+            RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/views/adminView/successPageAdmin.jsp");
             dispatcher.forward(request, response);
         } else {
-            RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/views/commonView/errorPage.jsp");
+            RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/views/adminView/errorPageAdmin.jsp");
             dispatcher.forward(request, response);
         }
     }

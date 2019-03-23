@@ -28,10 +28,10 @@ public class EditBusCommand implements ICommand {
         boolean wasUpdated = busDAO.update(busID, miles, passedService);
         System.out.println("wasUpdated " + wasUpdated);
         if (wasUpdated) {
-            RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/views/commonView/successPage.jsp");
+            RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/views/adminView/successPageAdmin.jsp");
             dispatcher.forward(request, response);
         } else {
-            RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/views/commonView/errorPage.jsp");
+            RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/views/adminView/errorPageAdmin.jsp");
             dispatcher.forward(request, response);
         }
     }

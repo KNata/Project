@@ -24,7 +24,7 @@ public class ShowAllVisitorsCommand implements ICommand {
         ArrayList<Visitor> visitorList = visitorDAO.findAll();
         System.out.println(visitorList.size());
         if (visitorList.size() == 0) {
-            RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/views/commonView/errorPage.jsp");
+            RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/views/adminView/errorPageAdmin.jsp");
             dispatcher.forward(request, response);
         } else {
             request.setAttribute("visitorList", visitorList);

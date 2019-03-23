@@ -38,7 +38,7 @@ public class ShowVisitorInfoCommand implements ICommand {
 
         if (driverStoryList.size() == 0) {
             System.out.println("1");
-            RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/views/commonView/errorPage.jsp");
+            RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/views/driverView/errorPageDriver.jsp");
             dispatcher.forward(request, response);
             System.out.println("2");
         } else {

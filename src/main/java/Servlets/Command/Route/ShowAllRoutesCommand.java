@@ -23,7 +23,7 @@ public class ShowAllRoutesCommand implements ICommand {
     public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         ArrayList<Route> routeList = routeDAO.findAll();
         if (routeList.size() == 0) {
-            RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/views/commonView/errorPage.jsp");
+            RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/views/adminView/errorPageAdmin.jsp");
             dispatcher.forward(request, response);
         }
         String nextJSP = "/views/adminView/seeAllRoutes.jsp";

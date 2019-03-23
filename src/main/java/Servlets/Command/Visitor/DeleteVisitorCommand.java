@@ -27,14 +27,14 @@ public class DeleteVisitorCommand implements ICommand {
             boolean wasDeleted = visitorDAO.deleteRecord(visitorID);
             System.out.println("wasDeleted " + wasDeleted);
             if (wasDeleted) {
-                RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/views/commonView/successPage.jsp");
+                RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/views/adminView/successPageAdmin.jsp");
                 dispatcher.forward(request, response);
             } else {
-                RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/views/commonView/errorPage.jsp");
+                RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/views/adminView/errorPageAdmin.jsp");
                 dispatcher.forward(request, response);
             }
         } else {
-            RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/views/commonView/errorPage.jsp");
+            RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/views/adminView/errorPageAdmin.jsp");
             dispatcher.forward(request, response);
         }
     }

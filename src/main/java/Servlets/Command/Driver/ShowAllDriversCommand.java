@@ -24,11 +24,11 @@ public class ShowAllDriversCommand implements ICommand {
         ArrayList<Driver> driverList = driverDAO.findAll();
         System.out.println(driverList.size());
         if (driverList.size() == 0) {
-            RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/views/commonView/errorPage.jsp");
+            RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/views/diverView/errorPageDriver.jsp");
             dispatcher.forward(request, response);
         } else {
             request.setAttribute("driverList", driverList);
-            RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/views/adminView/seeAllDrivers.jsp");
+            RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/views/driverView/seeAllDrivers.jsp");
             dispatcher.forward(request, response);
         }
     }

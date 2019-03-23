@@ -40,13 +40,13 @@ public class AddNewBusCommand implements ICommand {
                 ArrayList<Bus> busList = busDAO.findAll();
                 request.setAttribute("bus", theBus);
                 if (wasAdded) {
-                    RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/views/commonView/successPage.jsp");
+                    RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/views/adminView/successPageAdmin.jsp");
                     dispatcher.forward(request, response);
                 } else {
-                    response.sendRedirect("/views/commonView/successPage.jsp");
+                    response.sendRedirect("/views/adminView/successPageAdmin.jsp");
                 }
             } else {
-                response.sendRedirect("/views/commonView/errorPage.jsp");
+                response.sendRedirect("/views/adminView/errorPageAdmin.jsp");
             }
         }
 

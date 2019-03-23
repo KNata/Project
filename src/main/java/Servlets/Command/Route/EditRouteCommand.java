@@ -42,15 +42,15 @@ public class EditRouteCommand implements ICommand {
             boolean wasUpdated = routeDAO.update(Integer.valueOf(routeID), driverID, busID, departureTime, arrivalTime, duration);
             System.out.println(wasUpdated);
             if (wasUpdated) {
-                RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/views/commonView/successPage.jsp");
+                RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/views/adminView/successPageAdmin.jsp");
                 dispatcher.forward(request, response);
             } else {
-                RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/views/commonView/errorPage.jsp");
+                RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/views/adminView/errorPageAdmin.jsp");
                 dispatcher.forward(request, response);
                 System.out.println("Error because update procedure was failed");
             }
         } else {
-            RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/views/commonView/errorPage.jsp");
+            RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/views/adminView/errorPageAdmin.jsp");
             dispatcher.forward(request, response);
             System.out.println("Error inside verification block");
         }

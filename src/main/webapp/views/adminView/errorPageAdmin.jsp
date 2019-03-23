@@ -18,7 +18,7 @@
     </form>
 
     <br><br>
-    <a href="/views/adminView/errorPageAdmin.jsp" class="btn btn-primary btn-lg btn-block" role="button" aria-pressed="true"><fmt:message key="back.to.main.page" bundle="${rb}"/></a>
+    <a href="/views/adminView/adminMainPage.jsp" class="btn btn-primary btn-lg btn-block" role="button" aria-pressed="true"><fmt:message key="back.to.main.page" bundle="${rb}"/></a>
 </div>
 
 <%@include file="/views/commonView/footer.jsp"%>

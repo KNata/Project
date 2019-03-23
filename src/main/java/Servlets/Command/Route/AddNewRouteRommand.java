@@ -53,14 +53,14 @@ public class AddNewRouteRommand implements ICommand {
                             .setRouteDuration(Integer.valueOf(routeDuration)).setRouteStartTime(departureTime).setRouteEndTime(arrivalTime).build();
                     boolean wasAdded = routeDAO.addRecord(theRoute);
                     if (wasAdded) {
-                        RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/views/commonView/successPage.jsp");
+                        RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/views/adminView/successPageAdmin.jsp");
                         dispatcher.forward(request, response);
                     } else {
-                        RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/views/commonView/errorPage.jsp");
+                        RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/views/adminView/errorPageAdmin.jsp");
                         dispatcher.forward(request, response);
                     } }
             } else {
-                RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/views/commonView/errorPage.jsp");
+                RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/views/adminView/errorPageAdmin.jsp");
                 dispatcher.forward(request, response);
             }
         }

@@ -23,7 +23,7 @@ public class SeeListOfBuses implements ICommand {
     public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         ArrayList<Bus> busList = busDAO.findAll();
         if (busList.size() == 0) {
-            RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/views/commonView/errorPage.jsp");
+            RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/views/adminView/errorPageAdmin.jsp");
             dispatcher.forward(request, response);
         } else {
             String nextJSP = "/views/adminView/seeAllBuses.jsp";

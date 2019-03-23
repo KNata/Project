@@ -28,13 +28,13 @@ public class DeleteRouteCommand implements ICommand {
             boolean wasDeleted = routeDAO.deleteRecord(routeID);
             System.out.println(wasDeleted + "was deleted");
             if (wasDeleted) {
-                RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/views/commonView/successPage.jsp");
+                RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/views/adminView/successPageAdmin.jsp");
                 dispatcher.forward(request, response);
                 PrintWriter out= response.getWriter();
                 out.println("<font color=red>Done.</font>");
                 dispatcher.include(request, response);
             } else {
-                RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/views/commonView/errorPage.jsp");
+                RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/views/adminView/errorPageAdmin.jsp");
                 dispatcher.forward(request, response);
                 PrintWriter out= response.getWriter();
                 out.println("<font color=red>Fail.</font>");

@@ -38,7 +38,7 @@
     </div>
     </form>
 
-        <a href="/views/adminView/addNewDriverPage.jsp"><button type="submit" class="btn btn-primary btn-md"><fmt:message key="admin.add.new.driver" bundle="${rb}"/></button></a>
+        <a href="/views/adminView/registerPage.jsp"><button type="submit" class="btn btn-primary btn-md"><fmt:message key="admin.add.new.driver" bundle="${rb}"/></button></a>
         <a href="/views/adminView/adminMainPage.jsp"><button type="submit" class="btn btn-secondary btn-md"><fmt:message key="back.to.main.page" bundle="${rb}"/></button></a>
 
     <br>
