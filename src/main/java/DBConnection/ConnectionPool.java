@@ -15,6 +15,7 @@ public class ConnectionPool {
     private static BasicDataSource ds = new BasicDataSource();
     private static Properties property = new Properties();
     private static Logger theLogger;
+    private static Connection connection;
 
 
     static {
@@ -43,8 +44,14 @@ public class ConnectionPool {
     }
 
 
-    public static Connection getConnection() throws SQLException {
-        Connection connection = ds.getConnection();
+    public static Connection getConnection() {
+        if (connection == null) {
+            try {
+                connection = ds.getConnection();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
         return connection;
     }
 }
